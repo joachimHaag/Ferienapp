@@ -13,7 +13,7 @@ function App() {
   const endDatumFerien = serverImport[0].end;
   const startDatumFerienMs = Date.parse(startDateHol);
   const endDatumFerienMs = Date.parse(endDatumFerien);
-  const diff = (startDatumFerienMs - endDatumFerienMs) / 86400000;
+  const diff = (endDatumFerienMs - startDatumFerienMs) / 86400000;
   const eMonth = endDatumFerien.slice(0, 4); //Year !!!
   const endDay = endDatumFerien.slice(8, 10);
   const endMonth = endDatumFerien.slice(5, 7);

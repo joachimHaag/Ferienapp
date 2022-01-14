@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function Kachel({ diff, sDH }) {
+export default function Kachel(props) {
   return (
     <section>
       <h2>1.Woche</h2>
