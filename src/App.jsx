@@ -31,7 +31,7 @@ function App() {
             {nextHoliday} {eMonth}
           </h1>
           <h2>
-            {endDate} {"- "} {startDate}
+            {startDate} {"- "} {endDate}
           </h2>
           <div>An welchen der {diff} Tage würde Ihr Kind gerne spielen?</div>
 
