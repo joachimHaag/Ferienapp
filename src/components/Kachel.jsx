@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
-export default function Kachel({ diff, sDH }) {
+export default function Kachel(props) {
+  const buttons = [];
+  for (let i = 0; i < props.diff + 1; i++) {
+    buttons.push(<Tile id="{">Mo</Tile>);
+  }
+  console.log(buttons);
   return (
     <section>
-      <h2>1.Woche</h2>
+      <h2>{buttons}</h2>
       <Container>
         <Tile>Mo</Tile>
         <Tile>Di</Tile>
@@ -49,4 +54,5 @@ const Tile = styled.button`
   background-color: blue;
   font-size: 2rem;
   border-radius: 20%;
+  box-shadow: 5px 5px 10px black;
 `;

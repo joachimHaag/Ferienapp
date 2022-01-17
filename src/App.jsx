@@ -13,36 +13,44 @@ function App() {
   const endDatumFerien = serverImport[0].end;
   const startDatumFerienMs = Date.parse(startDateHol);
   const endDatumFerienMs = Date.parse(endDatumFerien);
-  const diff = (startDatumFerienMs - endDatumFerienMs) / 86400000;
+  const diff = (endDatumFerienMs - startDatumFerienMs) / 86400000;
   const eMonth = endDatumFerien.slice(0, 4); //Year !!!
   const endDay = endDatumFerien.slice(8, 10);
   const endMonth = endDatumFerien.slice(5, 7);
   const endDate = endDay + "." + endMonth + ".";
   const startDay = startDateHol.slice(8, 10);
+  console.log(typeof startDay);
   const startMonth = startDateHol.slice(5, 7);
   const startDate = startDay + "." + startMonth + ".";
+  const days = [];
+  for (let i = 0; i < diff + 1; i++) {
+    let day = Number(startDay) + i;
+    days.push({ day: day, id: `${day}${startMonth}22` });
+  }
+  console.log(days);
 
   return (
     <div className="App">
-      <body>
-        <header>
-          <div className="header"></div>
-          <h1 id="FerienName">
-            {nextHoliday} {eMonth}
-          </h1>
-          <h2>
-            {startDate} {"- "} {endDate}
-          </h2>
-          <div>An welchen der {diff} Tage würde Ihr Kind gerne spielen?</div>
+      {days.map((day) => (
+        <p>{day.id}</p>
+      ))}
+      <header>
+        <div className="header"></div>
+        <h1 id="FerienName">
+          {nextHoliday} {eMonth}
+        </h1>
+        <h2>
+          {startDate} {"- "} {endDate}
+        </h2>
+        <div>An welchen der {diff} Tage würde Ihr Kind gerne spielen?</div>
 
-          <div></div>
-        </header>
-        <Kachel diff={diff} sDH={startDateHol} />
+        <div></div>
+      </header>
+      <Kachel diff={diff} sDH={startDateHol} />
 
-        <footer>
-          <nav></nav>
-        </footer>
-      </body>
+      <footer>
+        <nav></nav>
+      </footer>
     </div>
   );
 }
