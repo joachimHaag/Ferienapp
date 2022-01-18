@@ -7,7 +7,6 @@ import Kachel from "./components/Kachel";
 function App() {
   const [count, setCount] = useState(0);
   const [alleFerien, setAlleFerien] = useState([]);
-
   const nextHoliday = serverImport[0].name;
   const startDateHol = serverImport[0].start;
   const endDatumFerien = serverImport[0].end;
@@ -19,7 +18,6 @@ function App() {
   const endMonth = endDatumFerien.slice(5, 7);
   const endDate = endDay + "." + endMonth + ".";
   const startDay = startDateHol.slice(8, 10);
-  console.log(typeof startDay);
   const startMonth = startDateHol.slice(5, 7);
   const startDate = startDay + "." + startMonth + ".";
   const days = [];
@@ -27,6 +25,7 @@ function App() {
     let day = Number(startDay) + i;
     days.push({ day: day, id: `${day}${startMonth}22` });
   }
+  const dayOfWeek = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
   console.log(days);
 
   return (
@@ -46,7 +45,7 @@ function App() {
 
         <div></div>
       </header>
-      <Kachel diff={diff} sDH={startDateHol} />
+      <Kachel diff={diff} dOW={dayOfWeek} id={days.id} />
 
       <footer>
         <nav></nav>

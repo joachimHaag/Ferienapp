@@ -3,31 +3,18 @@ import styled from "styled-components";
 export default function Kachel(props) {
   const buttons = [];
   for (let i = 0; i < props.diff + 1; i++) {
-    buttons.push(<Tile id="{">Mo</Tile>);
+    buttons.push(
+      <Tile id="{props.days.day.id}">
+        {props.dOW[i]}
+        {props.id}
+      </Tile>
+    );
   }
   console.log(buttons);
   return (
     <section>
-      <h2>{buttons}</h2>
-      <Container>
-        <Tile>Mo</Tile>
-        <Tile>Di</Tile>
-        <Tile>Mi</Tile>
-        <Tile>Do</Tile>
-        <Tile>Fr</Tile>
-        <Tile>Sa</Tile>
-        <Tile>So</Tile>
-      </Container>
-      <h2>2.Woche</h2>
-      <Container>
-        <Tile>Mo</Tile>
-        <Tile>Di</Tile>
-        <Tile>Mi</Tile>
-        <Tile>Do</Tile>
-        <Tile>Fr</Tile>
-        <Tile>Sa</Tile>
-        <Tile>So</Tile>
-      </Container>
+      <h2>1. Woche</h2>
+      <div>{buttons}</div>
     </section>
   );
 }
