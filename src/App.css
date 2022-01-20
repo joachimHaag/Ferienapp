@@ -44,3 +44,17 @@ button {
 body {
   background-color: green;
 }
+
+h2 {
+  font-size: 2rem;
+  position: relative;
+  top: -20px;
+  margin-bottom: -30px;
+}
+.selected {
+  background-color: red;
+}
+
+.unselected {
+  background-color: yellow;
+}

@@ -25,7 +25,22 @@ function App() {
     let day = Number(startDay) + i;
     days.push({ day: day, id: `${day}${startMonth}22` });
   }
-  const dayOfWeek = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
+  const dayOfWeek = [
+    "Mo",
+    "Di",
+    "Mi",
+    "Do",
+    "Fr",
+    "Sa",
+    "So",
+    "Mo",
+    "Di",
+    "Mi",
+    "Do",
+    "Fr",
+    "Sa",
+    "So",
+  ];
   console.log(days.id);
 
   return (
@@ -39,13 +54,14 @@ function App() {
           {nextHoliday} {eMonth}
         </h1>
         <h2>
-          {startDate} {"- "} {endDate}
+          {startDate} {"- "} {endDate}22
         </h2>
-        <div>An welchen der {diff} Tage würde Ihr Kind gerne spielen?</div>
+        <p></p>
+        <div>An welchen der {diff + 1} Tage würde Ihr Kind gerne spielen?</div>
 
         <div></div>
       </header>
-      <Kachel diff={diff} dOW={dayOfWeek} days={days} />
+      <Kachel diff={diff} dOW={dayOfWeek} days={days} endMonth={endMonth} />
 
       <footer>
         <nav></nav>
