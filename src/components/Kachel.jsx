@@ -3,13 +3,22 @@ import { useState } from "react";
 
 export default function Kachel(props) {
   const buttons = [];
-  /* const [toggle, setToggle] = useState(false);
-  const toggleCard = () => {
-    setToggle(!toggle); 
-  }; */
+  const [selectedDays, setSelectedDays] = useState([]);
+  const toggleCard = (i) => {
+    if (selectedDays.includes(i)) {
+      setSelectedDays(selectedDays.filter((day) => day !== i));
+    } else {
+      setSelectedDays([...selectedDays, i]);
+    }
+  };
   for (let i = 0; i < props.diff + 1; i++) {
     buttons.push(
-      <Tile id="{props.days[i].id}">
+      <Tile
+        id="{props.days[i].id}"
+        className={` ${selectedDays.includes(i) ? "selected" : "unselected"}`}
+        value="{props.days[i].id}"
+        onClick={() => toggleCard(i)}
+      >
         <h2>{props.dOW[i]}</h2>
         <p>
           {props.days[i].day}.{props.endMonth}.
@@ -17,7 +26,7 @@ export default function Kachel(props) {
       </Tile>
     );
   }
-  console.log(buttons);
+  console.log(selectedDays);
   return (
     <section>
       <h2>1. Woche</h2>
@@ -26,15 +35,12 @@ export default function Kachel(props) {
   );
 }
 
-const section = styled.section`
-  background-color: red;
-`;
 const Tile = styled.button`
   height: 5rem;
   width: 5rem;
   margin: 1rem;
   padding: 0;
-  background-color: blue;
+
   font-size: 1rem;
   border-radius: 20%;
   box-shadow: 5px 5px 10px black;

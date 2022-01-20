@@ -52,9 +52,9 @@ h2 {
   margin-bottom: -30px;
 }
 .selected {
-  background-color: red;
+  background-color: tomato;
 }
 
 .unselected {
-  background-color: yellow;
+  background-color: blue;
 }

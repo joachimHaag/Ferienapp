@@ -41,13 +41,14 @@ function App() {
     "Sa",
     "So",
   ];
+
   console.log(days.id);
 
   return (
     <div className="App">
-      {days.map((day) => (
+      {/* {days.map((day) => (
         <p>{day.id}</p>
-      ))}
+      ))} */}
       <header>
         <div className="header"></div>
         <h1 id="FerienName">
@@ -61,8 +62,9 @@ function App() {
 
         <div></div>
       </header>
-      <Kachel diff={diff} dOW={dayOfWeek} days={days} endMonth={endMonth} />
-
+      <div>
+        <Kachel diff={diff} dOW={dayOfWeek} days={days} endMonth={endMonth} />
+      </div>
       <footer>
         <nav></nav>
       </footer>
