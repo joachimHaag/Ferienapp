@@ -4,7 +4,9 @@ import { saveToLocal, loadFromLocal } from "./localStorage";
 
 export default function Kachel(props) {
   const buttons = [];
-  const [selectedDays, setSelectedDays] = useState([]);
+  const localStorageDays = loadFromLocal("_selectedDays");
+  const [selectedDays, setSelectedDays] = useState(localStorageDays ?? []);
+
   const toggleCard = (i) => {
     if (selectedDays.includes(i)) {
       setSelectedDays(selectedDays.filter((day) => day !== i));
@@ -16,7 +18,7 @@ export default function Kachel(props) {
     buttons.push(
       <Tile
         id="{props.days[i].id}"
-        className={` ${selectedDays.includes(i) ? "unselected" : "selected"}`}
+        className={` ${selectedDays.includes(i) ? "selected" : "unselected"}`}
         value="{props.days[i].id}"
         onClick={() => toggleCard(i)}
       >
@@ -30,8 +32,11 @@ export default function Kachel(props) {
   console.log(selectedDays);
   return (
     <section>
-      <h2>1. Woche</h2>
+      <h2>Ferientage</h2>
       <div>{buttons}</div>
+      <button onClick={saveToLocal("_selectedDays", selectedDays)}>
+        Submitt
+      </button>
     </section>
   );
 }
