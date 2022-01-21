@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
+import { saveToLocal, loadFromLocal } from "./localStorage";
 
 export default function Kachel(props) {
   const buttons = [];
@@ -15,7 +16,7 @@ export default function Kachel(props) {
     buttons.push(
       <Tile
         id="{props.days[i].id}"
-        className={` ${selectedDays.includes(i) ? "selected" : "unselected"}`}
+        className={` ${selectedDays.includes(i) ? "unselected" : "selected"}`}
         value="{props.days[i].id}"
         onClick={() => toggleCard(i)}
       >
@@ -40,8 +41,7 @@ const Tile = styled.button`
   width: 5rem;
   margin: 1rem;
   padding: 0;
-
   font-size: 1rem;
-  border-radius: 20%;
+  border-radius: 5%;
   box-shadow: 5px 5px 10px black;
 `;

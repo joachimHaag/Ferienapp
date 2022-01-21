@@ -58,3 +58,6 @@ h2 {
 .unselected {
   background-color: blue;
 }
+.unselected:hover {
+  color: white;
+}

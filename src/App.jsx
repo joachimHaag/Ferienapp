@@ -3,6 +3,7 @@ import "./App.css";
 import styled from "styled-components";
 import serverImport from "./data.js";
 import Kachel from "./components/Kachel";
+import { saveToLocal, loadFromLocal } from "./components/localStorage";
 
 function App() {
   const [count, setCount] = useState(0);
