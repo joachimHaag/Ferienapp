@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { saveToLocal, loadFromLocal } from "./localStorage";
+import { saveToLocal, loadFromLocal } from "../components/localStorage";
 
-function Settings() {
+export default function Settings() {
   return (
     <div>
       <input name="Vorname" placeholder="Vorname" type={"text"} />

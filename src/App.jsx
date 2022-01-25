@@ -4,6 +4,11 @@ import styled from "styled-components";
 import serverImport from "./data.js";
 import Kachel from "./components/Kachel";
 import { saveToLocal, loadFromLocal } from "./components/localStorage";
+import Settings from "./pages/Settings";
+
+import { NavLink, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { StrictMode } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -63,12 +68,28 @@ function App() {
 
         <div></div>
       </header>
-      <div>
-        <Kachel diff={diff} dOW={dayOfWeek} days={days} endMonth={endMonth} />
-      </div>
+
       <footer>
-        <nav></nav>
+        <NavLink to={"/settings"}>Settings</NavLink>
+        <br></br>
+        <NavLink to={"/"}>Home </NavLink>
       </footer>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <Kachel
+                diff={diff}
+                dOW={dayOfWeek}
+                days={days}
+                endMonth={endMonth}
+              />
+            </div>
+          }
+        />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
     </div>
   );
 }
