@@ -42,7 +42,7 @@ button {
 }
 
 body {
-  background-color: green;
+  background-color: #d0b679;
 }
 
 h2 {
@@ -52,12 +52,12 @@ h2 {
   margin-bottom: -30px;
 }
 .selected {
-  background-color: tomato;
+  background-color: #441326;
 }
 
 .unselected {
-  background-color: blue;
+  background-color: #c56357;
 }
 .unselected:hover {
-  color: white;
+  color: #441326;
 }
