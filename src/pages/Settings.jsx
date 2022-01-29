@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import "../App.css";
 import { useState } from "react";
 import { saveToLocal, loadFromLocal } from "../components/localStorage";
 
 export default function Settings() {
   return (
-    <div>
+    <div class="input">
       <input name="Vorname" placeholder="Vorname" type={"text"} />
-      <input name="Nachname" placeholder="Vorname" type={"text"} />
+      <input name="Nachname" placeholder="Nachname" type={"text"} />
       <input name="Kind" placeholder="Kind" type={"text"} />
       <input name="Mail" placeholder="Mail" type={"mail"} />
     </div>

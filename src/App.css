@@ -61,3 +61,12 @@ h2 {
 .unselected:hover {
   color: #441326;
 }
+
+.input {
+  direction: flex;
+  padding: 50px;
+  color: blue;
+  margin: 10px;
+  height: 100px;
+  width: 200px;
+}
