@@ -65,8 +65,23 @@ h2 {
 .input {
   direction: flex;
   padding: 50px;
-  color: blue;
+
   margin: 10px;
   height: 100px;
   width: 200px;
+}
+
+.Navi {
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 0px;
+  background-color: rgb(87, 37, 37);
+  z-index: 3;
+  padding: 5px;
+  border: 2px solid black;
+  box-shadow: 10px 2px 11px rgba(11, 18, 26, 0.637);
+  border-radius: 5px;
+  margin-left: 100px;
+  margin-right: auto;
+  text-decoration: none;
 }

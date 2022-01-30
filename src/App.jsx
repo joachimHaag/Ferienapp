@@ -70,9 +70,11 @@ function App() {
       </header>
 
       <footer>
-        <NavLink to={"/settings"}>Settings</NavLink>
-        <br></br>
-        <NavLink to={"/"}>Home </NavLink>
+        <nav className="Navi">
+          <NavLink to={"/settings"}>Settings </NavLink>
+
+          <NavLink to={"/"}>Home </NavLink>
+        </nav>
       </footer>
       <Routes>
         <Route
@@ -95,3 +97,13 @@ function App() {
 }
 
 export default App;
+
+const Navi = styled.button`
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem;
+  padding: 0;
+  font-size: 1rem;
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px black;
+`;
