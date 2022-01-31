@@ -5,7 +5,6 @@ import serverImport from "./data.js";
 import Kachel from "./components/Kachel";
 import { saveToLocal, loadFromLocal } from "./components/localStorage";
 import Settings from "./pages/Settings";
-
 import { NavLink, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { StrictMode } from "react";
@@ -57,6 +56,7 @@ function App() {
       ))} */}
       <header>
         <div className="header"></div>
+        <img src={"./pages/Egg.png"} alt="" width="30" height="30" />
         <h1 id="FerienName">
           {nextHoliday} {eMonth}
         </h1>
@@ -65,7 +65,6 @@ function App() {
         </h2>
         <p></p>
         <div>An welchen der {diff + 1} Tage würde Ihr Kind gerne spielen?</div>
-
         <div></div>
       </header>
 
