@@ -56,7 +56,7 @@ function App() {
       ))} */}
       <header>
         <div className="header"></div>
-        <img src={"./pages/Egg.png"} alt="" width="30" height="30" />
+        <img src={"./pages/Egg.svg"} alt="" width="30" height="30" />
         <h1 id="FerienName">
           {nextHoliday} {eMonth}
         </h1>
