@@ -8,6 +8,7 @@ import Settings from "./pages/Settings";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { StrictMode } from "react";
+import Egg from "./pages/Egg.svg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -56,7 +57,7 @@ function App() {
       ))} */}
       <header>
         <div className="header"></div>
-        <img src={"./pages/Egg.svg"} alt="" width="30" height="30" />
+        <img src={Egg} alt="egg" id={"egg"} width="60" height="60" />
         <h1 id="FerienName">
           {nextHoliday} {eMonth}
         </h1>
@@ -64,22 +65,29 @@ function App() {
           {startDate} {"- "} {endDate}22
         </h2>
         <p></p>
-        <div>An welchen der {diff + 1} Tage würde Ihr Kind gerne spielen?</div>
+
         <div></div>
       </header>
 
-      <footer>
-        <nav className="Navi">
-          <NavLink to={"/settings"}>Settings </NavLink>
+      <footer className="Navi">
+        <div>
+          <nav>
+            <NavLink to={"/settings"} img src={Egg}>
+              Settings {"   "}
+            </NavLink>
 
-          <NavLink to={"/"}>Home </NavLink>
-        </nav>
+            <NavLink to={"/"}>Home </NavLink>
+          </nav>
+        </div>
       </footer>
       <Routes>
         <Route
           path="/"
           element={
             <div>
+              <div>
+                An welchen der {diff + 1} Tage würde Ihr Kind gerne spielen?
+              </div>
               <Kachel
                 diff={diff}
                 dOW={dayOfWeek}
@@ -97,7 +105,7 @@ function App() {
 
 export default App;
 
-const Navi = styled.button`
+/* const Navi = styled.button`
   height: 5rem;
   width: 5rem;
   margin: 1rem;
@@ -105,4 +113,4 @@ const Navi = styled.button`
   font-size: 1rem;
   border-radius: 5%;
   box-shadow: 5px 5px 10px black;
-`;
+`; */

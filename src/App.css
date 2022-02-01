@@ -72,16 +72,19 @@ h2 {
 }
 
 .Navi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
   position: fixed;
-  bottom: 0px;
-  background-color: rgb(87, 37, 37);
+  bottom: 5px;
+  background-color: #4d5f1a;
   z-index: 3;
-  padding: 5px;
   border: 2px solid black;
   box-shadow: 10px 2px 11px rgba(11, 18, 26, 0.637);
   border-radius: 5px;
-  margin-left: 100px;
-  margin-right: auto;
   text-decoration: none;
+  color: white;
+  margin-left: 100px;
 }
