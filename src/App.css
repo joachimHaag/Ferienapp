@@ -88,3 +88,9 @@ h2 {
   color: white;
   margin-left: 100px;
 }
+
+.navIcon {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}

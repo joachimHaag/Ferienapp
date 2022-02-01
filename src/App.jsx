@@ -9,6 +9,8 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { StrictMode } from "react";
 import Egg from "./pages/Egg.svg";
+import Home from "./pages/Home.svg";
+import SetIcon from "./pages/Settings.svg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -57,7 +59,14 @@ function App() {
       ))} */}
       <header>
         <div className="header"></div>
-        <img src={Egg} alt="egg" id={"egg"} width="60" height="60" />
+        <img
+          src={Egg}
+          alt="egg"
+          className="navIcon"
+          id={"egg"}
+          width="60"
+          height="60"
+        />
         <h1 id="FerienName">
           {nextHoliday} {eMonth}
         </h1>
@@ -72,11 +81,26 @@ function App() {
       <footer className="Navi">
         <div>
           <nav>
-            <NavLink to={"/settings"} img src={Egg}>
-              Settings {"   "}
+            <NavLink to={"/"}>
+              <img
+                src={Home}
+                alt="home"
+                className="navIcon"
+                width="30"
+                height="30"
+              />
             </NavLink>
 
-            <NavLink to={"/"}>Home </NavLink>
+            <NavLink to={"/settings"} img src={Egg}>
+              <img
+                src={SetIcon}
+                alt="Sett"
+                id={"sett"}
+                width="30"
+                height="30"
+                className="navIcon"
+              />
+            </NavLink>
           </nav>
         </div>
       </footer>
