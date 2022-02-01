@@ -78,8 +78,8 @@ function App() {
         <div></div>
       </header>
 
-      <footer className="Navi">
-        <div>
+      <footer>
+        <div className="Navi">
           <nav>
             <NavLink to={"/"}>
               <img
