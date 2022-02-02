@@ -39,6 +39,7 @@
 
 button {
   font-size: calc(10px + 2vmin);
+  background-color: grey;
 }
 
 body {
@@ -66,7 +67,7 @@ h2 {
 footer {
   position: fixed;
   bottom: 5px;
-  width: 80%;
+  width: 100%;
   z-index: 3;
 }
 
@@ -77,12 +78,11 @@ footer {
   align-items: center;
   font-size: 1.5rem;
   background-color: #4d5f1a;
-
   border: 2px solid black;
   box-shadow: 10px 2px 11px rgba(11, 18, 26, 0.637);
   border-radius: 5px;
   margin-left: 70px;
-  margin-right: 0px;
+  margin-right: 70px;
 }
 
 .navIcon {
