@@ -64,8 +64,8 @@ function App() {
           alt="egg"
           className="navIcon"
           id={"egg"}
-          width="60"
-          height="60"
+          width="80"
+          height="80"
         />
         <h1 id="FerienName">
           {nextHoliday} {eMonth}
@@ -80,7 +80,7 @@ function App() {
 
       <footer>
         <div className="Navi">
-          <nav>
+          <nav className="navIcon">
             <NavLink to={"/"}>
               <img
                 src={Home}
