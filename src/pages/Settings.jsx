@@ -11,8 +11,10 @@ export default function Settings() {
       <input name="Nachname" placeholder="Nachname" type={"text"} />
       <input name="Kind" placeholder="Kind" type={"text"} />
       <input name="Mail" placeholder="Mail" type={"mail"} />
-      <div>.</div>
-      <button>Submitt</button>
+      <div>
+        <br></br>
+      </div>
+      <button>Submit</button>
     </div>
   );
 }

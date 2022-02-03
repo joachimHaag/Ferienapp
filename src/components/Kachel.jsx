@@ -35,7 +35,7 @@ export default function Kachel(props) {
       <h2>Ferientage</h2>
       <div>{buttons}</div>
       <button onClick={saveToLocal("_selectedDays", selectedDays)}>
-        Submitt
+        Submit
       </button>
     </section>
   );
